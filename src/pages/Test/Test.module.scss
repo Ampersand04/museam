@@ -1,0 +1,38 @@
+.list {
+    width: 100%;
+    padding: 145px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .elem {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 48%;
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid #595959;
+        background-color: #252525;
+
+        img {
+            object-fit: cover;
+            max-height: 300px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 100%;
+            p {
+                line-height: 160%;
+                color: #efefef;
+                font-size: 14px;
+            }
+        }
+    }
+}

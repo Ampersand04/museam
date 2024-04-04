@@ -1,0 +1,22 @@
+.button {
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    width: fit-content;
+    border: 1px solid rgb(248, 248, 248);
+    color: white;
+    background-color: transparent;
+
+    transition: all 0.4s ease;
+
+    &:hover {
+        font-weight: 700;
+        color: #000000;
+        background-color: white;
+        border: 1px solid white;
+
+        cursor: pointer;
+    }
+}
