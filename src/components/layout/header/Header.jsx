@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 import { MENU } from './Header.data';
 import styles from './Header.module.scss';
 import Button from '../../ui/button/Button';
+import { useState } from 'react';
 
 export function Header() {
+    const [openDropMenu, setOpenDropMenu] = useState(false);
+    function openDrop() {
+        setOpenDropMenu(!openDropMenu);
+    }
     return (
         <header className={styles.header}>
             <div className={styles.inner}>
@@ -15,29 +20,60 @@ export function Header() {
                         МУЗЕЙ ВОЙНЫ <br />В АФГАНИСТАНЕ
                     </h1>
                 </Link>
-                <nav className={styles.menu}>
-                    {MENU.map((item) =>
-                        item.url === 'excursion' ? (
-                            <LocalLink
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration={500}
-                                to={item.url}
-                                key={item.url}
-                                className={styles.active}>
-                                {item.placeholder}
-                            </LocalLink>
-                        ) : (
-                            <Link to={item.url} key={item.url} className={styles.active}>
-                                {item.placeholder}
-                            </Link>
-                        ),
-                    )}
-                </nav>
-                <Link to="/feedback">
+
+                {openDropMenu ? (
+                    <nav className={styles.drop}>
+                        {MENU.map((item) =>
+                            item.url === 'excursion' ? (
+                                <LocalLink
+                                    spy={true}
+                                    smooth={true}
+                                    offset={0}
+                                    duration={500}
+                                    to={item.url}
+                                    key={item.url}
+                                    className={styles.active}>
+                                    {item.placeholder}
+                                </LocalLink>
+                            ) : (
+                                <Link to={'/' + item.url} key={item.url} className={styles.active}>
+                                    {item.placeholder}
+                                </Link>
+                            ),
+                        )}
+
+                        <Link to="/feedback">
+                            <Button>Обратная связь</Button>
+                        </Link>
+                    </nav>
+                ) : (
+                    <nav className={styles.menu}>
+                        {MENU.map((item) =>
+                            item.url === 'excursion' ? (
+                                <LocalLink
+                                    spy={true}
+                                    smooth={true}
+                                    offset={0}
+                                    duration={500}
+                                    to={item.url}
+                                    key={item.url}
+                                    className={styles.active}>
+                                    {item.placeholder}
+                                </LocalLink>
+                            ) : (
+                                <Link to={'/' + item.url} key={item.url} className={styles.active}>
+                                    {item.placeholder}
+                                </Link>
+                            ),
+                        )}
+                    </nav>
+                )}
+
+                <Link to="/feedback" className={styles.feedback}>
                     <Button>Обратная связь</Button>
                 </Link>
+
+                <img className={styles.burger} src="./burger.svg" onClick={openDrop} />
             </div>
         </header>
     );

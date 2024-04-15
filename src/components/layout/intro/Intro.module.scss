@@ -6,6 +6,9 @@
     // padding: 100px 0 0 0;
     height: 100vh;
 
+    overflow: hidden;
+    animation: startAnim 0.4s;
+
     &_small {
         font-family: 'Montserrat', sans-serif;
         padding: 100px 0 0 0;
@@ -28,6 +31,7 @@
 
                 font-weight: 700;
                 text-transform: uppercase;
+                animation: startAnim 0.4s;
             }
         }
     }
@@ -47,6 +51,50 @@
             font-weight: 700;
             text-transform: uppercase;
             max-width: 400px;
+        }
+    }
+
+    @keyframes startAnim {
+        0% {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .intro {
+        .inner {
+            gap: 10px;
+            padding: 0 70px;
+            h1 {
+                margin: 10px 0;
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .intro {
+        .inner {
+            align-items: center;
+            gap: 10px;
+            padding: 0 20px;
+            h1 {
+                margin: 10px auto;
+                font-size: 35px;
+                text-align: center;
+                width: 350px;
+            }
+
+            a {
+                width: fit-content;
+            }
         }
     }
 }

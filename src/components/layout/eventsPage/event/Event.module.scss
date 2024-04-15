@@ -1,0 +1,15 @@
+.event {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    gap: 40px;
+    padding: 145px;
+    width: 100%;
+
+    img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

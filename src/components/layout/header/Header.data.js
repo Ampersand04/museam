@@ -1,14 +1,14 @@
 export const MENU = [
     {
-        url: '/',
+        url: '',
         placeholder: 'Главная',
     },
     {
-        url: '/about',
+        url: 'about',
         placeholder: 'О музее',
     },
     {
-        url: '/exposition',
+        url: 'exposition',
         placeholder: 'Экспозиция',
     },
 
@@ -17,11 +17,11 @@ export const MENU = [
         placeholder: 'Экскурсии',
     },
     {
-        url: '/events',
+        url: 'events',
         placeholder: 'Мероприятия',
     },
     {
-        url: '/test',
+        url: 'test',
         placeholder: 'Тест',
     },
 ];

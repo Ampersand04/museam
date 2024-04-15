@@ -7,6 +7,8 @@ import Button from '../../components/ui/button/Button';
 import { useState } from 'react';
 import Modal from '../../components/ui/modal/Modal';
 
+import { AnimatePresence } from 'framer-motion';
+
 export const Exposition = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedDataIndex, setSelectedDataIndex] = useState(null); // Состояние для хранения индекса выбранного элемента
@@ -41,16 +43,18 @@ export const Exposition = () => {
                     ))}
                 </div>
 
-                {isOpen && selectedDataIndex !== null && (
-                    <Modal close={closeModal}>
-                        <h1>{data[selectedDataIndex].title}</h1>
-                        <p>{data[selectedDataIndex].description}</p>
+                <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+                    {isOpen && selectedDataIndex !== null && (
+                        <Modal close={closeModal}>
+                            <h1>{data[selectedDataIndex].title}</h1>
+                            <p>{data[selectedDataIndex].description}</p>
 
-                        {data[selectedDataIndex].qr && (
-                            <img src={data[selectedDataIndex].qr} alt="" />
-                        )}
-                    </Modal>
-                )}
+                            {data[selectedDataIndex].qr && (
+                                <img src={data[selectedDataIndex].qr} alt="" />
+                            )}
+                        </Modal>
+                    )}
+                </AnimatePresence>
             </Layout>
         </div>
     );

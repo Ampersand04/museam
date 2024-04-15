@@ -30,6 +30,9 @@
             gap: 35px;
             width: 50%;
             line-height: 160%;
+            a {
+                width: fit-content;
+            }
             h2 {
                 line-height: 130%;
                 font-size: 30px;
@@ -47,6 +50,93 @@
             height: 540px;
 
             object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        .inner {
+            gap: 40px;
+            padding: 100px 70px;
+
+            a {
+                width: fit-content;
+            }
+            .text {
+                line-height: 130%;
+                h2 {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+                p {
+                    text-align: justify;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .about {
+        .inner {
+            position: relative;
+            padding: 100px 0;
+
+            width: 80%;
+            border-radius: 10px;
+            .text {
+                position: absolute;
+                top: 100px;
+                bottom: 100px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                line-height: 130%;
+                backdrop-filter: blur(10px);
+
+                border-radius: 10px;
+
+                padding: 30px;
+                h2 {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+                p {
+                    text-align: justify;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+
+            img {
+                width: 100%;
+
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        .inner {
+            padding: 50px 0;
+            .text {
+                top: 50px;
+                bottom: 50px;
+                gap: 20px;
+                line-height: 100%;
+
+                h2 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 11px;
+                }
+            }
         }
     }
 }
