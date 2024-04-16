@@ -36,3 +36,23 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .list {
+        flex-direction: column;
+        padding: 0 50px 100px 50px;
+        .elem {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        flex-direction: column;
+        padding: 0 50px 100px 50px;
+        .elem {
+            padding: 20px;
+        }
+    }
+}

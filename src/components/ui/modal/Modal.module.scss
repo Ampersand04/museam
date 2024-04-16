@@ -32,20 +32,28 @@
             flex-direction: column;
             gap: 20px;
 
-            .close {
-                position: absolute;
+            .head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
 
-                top: 30px;
-                right: 30px;
+                .close {
+                    // position: absolute;
 
-                background-color: transparent;
-                color: #fff;
-                padding: 10px;
-                border: 0;
-                outline: 0;
+                    // top: 30px;
+                    // right: 30px;
 
-                &:hover {
-                    cursor: pointer;
+                    background-color: transparent;
+                    color: #fff;
+                    padding: 10px;
+                    border: 0;
+                    outline: 0;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -54,6 +62,34 @@
                 height: 100px;
                 object-fit: cover;
                 border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .modal {
+        .dark {
+            .modal_block {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal {
+        .dark {
+            .modal_block {
+                padding: 20px;
+                .head {
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+                p {
+                    font-size: 15px;
+                }
             }
         }
     }

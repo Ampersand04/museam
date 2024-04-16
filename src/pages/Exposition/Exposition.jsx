@@ -45,8 +45,7 @@ export const Exposition = () => {
 
                 <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
                     {isOpen && selectedDataIndex !== null && (
-                        <Modal close={closeModal}>
-                            <h1>{data[selectedDataIndex].title}</h1>
+                        <Modal title={data[selectedDataIndex].title} close={closeModal}>
                             <p>{data[selectedDataIndex].description}</p>
 
                             {data[selectedDataIndex].qr && (

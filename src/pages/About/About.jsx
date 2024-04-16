@@ -11,8 +11,8 @@ export const About = () => {
                 <div className={styles.about_video}>
                     <div className={styles.video}>
                         <iframe
-                            width="560"
-                            height="315"
+                            // width="560"
+                            // height="315"
                             src="https://www.youtube.com/embed/fUdyxGyi1yY?si=FNhVVqIU4qwRUoFr"
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

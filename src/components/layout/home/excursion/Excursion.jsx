@@ -101,8 +101,7 @@ export function Excursion() {
             </div>
             <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
                 {isOpen && selectedDataIndex !== null && (
-                    <Modal close={closeModal}>
-                        <h1>{excursionData[selectedDataIndex].title}</h1>
+                    <Modal title={excursionData[selectedDataIndex].title} close={closeModal}>
                         <p>{excursionData[selectedDataIndex].description}</p>
                     </Modal>
                 )}

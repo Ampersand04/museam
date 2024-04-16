@@ -37,6 +37,7 @@
             position: relative;
             display: flex;
             flex-direction: row;
+            justify-content: center;
             flex-wrap: wrap;
             overflow: hidden;
             gap: 30px;
@@ -155,6 +156,14 @@
     .events {
         padding: 100px;
         .inner {
+            .blocklist {
+                gap: 10px;
+                padding: 10px;
+
+                a {
+                    width: 40%;
+                }
+            }
             .list {
                 height: 450px;
                 gap: 10px;
@@ -172,6 +181,11 @@
     .events {
         padding: 50px 0;
         .inner {
+            .blocklist {
+                a {
+                    width: 45%;
+                }
+            }
             .list {
                 gap: 0;
             }
@@ -183,6 +197,11 @@
     .events {
         padding: 50px 10px;
         .inner {
+            .blocklist {
+                a {
+                    width: 90%;
+                }
+            }
             .list {
                 gap: 0;
                 a {
