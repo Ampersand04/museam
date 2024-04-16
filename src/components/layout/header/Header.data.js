@@ -11,11 +11,6 @@ export const MENU = [
         url: 'exposition',
         placeholder: 'Экспозиция',
     },
-
-    {
-        url: 'excursion',
-        placeholder: 'Экскурсии',
-    },
     {
         url: 'events',
         placeholder: 'Мероприятия',
