@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     height: fit-content;
-    padding: 20px;
+    padding: 20px 50px;
 
     color: #fff;
     background-color: #2b2b2b;
@@ -30,5 +30,25 @@
         justify-content: center;
 
         gap: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        .footer__inner {
+            .footer__item {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        .footer__inner {
+            .footer__item {
+                width: 50%;
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 // import Button from '../../ui/button/Button';
 import { Link as LocalLink } from 'react-scroll';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MENU } from './Header.data';
 import styles from './Header.module.scss';
 import Button from '../../ui/button/Button';
@@ -8,6 +8,9 @@ import { useState } from 'react';
 
 export function Header() {
     const [openDropMenu, setOpenDropMenu] = useState(false);
+    const eventPage = useLocation();
+    const navigate = useNavigate();
+    const goBack = () => navigate(-1);
     function openDrop() {
         setOpenDropMenu(!openDropMenu);
     }
@@ -72,8 +75,11 @@ export function Header() {
                 <Link to="/feedback" className={styles.feedback}>
                     <Button>Обратная связь</Button>
                 </Link>
-
-                <img className={styles.burger} src="./burger.svg" onClick={openDrop} />
+                {eventPage.pathname.startsWith('/event/') ? (
+                    <img className={styles.arrow_back} src="./arrow_back.svg" onClick={goBack} />
+                ) : (
+                    <img className={styles.burger} src="./burger.svg" onClick={openDrop} />
+                )}
             </div>
         </header>
     );

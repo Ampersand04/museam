@@ -7,6 +7,7 @@ export function Event({ id }) {
     const eventsData = [
         {
             title: 'Митинг-реквием, посвященный Дню памяти В.И. Хована (15 сентрября)',
+            description: '',
             image: '/event01.jpg',
         },
         {

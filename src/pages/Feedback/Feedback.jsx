@@ -1,5 +1,4 @@
 import { Layout } from '../../components/layout/Layout';
-import { Intro } from '../../components/layout/intro/Intro';
 import Button from '../../components/ui/button/Button';
 import styles from './Feedback.module.scss';
 
@@ -7,7 +6,7 @@ export const Feedback = () => {
     return (
         <div className={styles.feedback}>
             <Layout>
-                <Intro small title="Оставить отзыв" />
+                {/* <Intro small title="Оставить отзыв" /> */}
                 <div className={styles.elem}>
                     <div className={styles.path}>
                         <div className={styles.content}>
