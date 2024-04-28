@@ -62,11 +62,19 @@
                 line-height: 160%;
             }
 
-            img {
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-                border-radius: 10px;
+            a {
+                width: fit-content;
+
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
             }
         }
     }

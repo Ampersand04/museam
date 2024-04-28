@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Modal from '../../components/ui/modal/Modal';
 
 import { AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Exposition = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,9 @@ export const Exposition = () => {
                             <p>{data[selectedDataIndex].description}</p>
 
                             {data[selectedDataIndex].qr && (
-                                <img src={data[selectedDataIndex].qr} alt="" />
+                                <Link target="_blank" to={data[selectedDataIndex].qr_url}>
+                                    <img src={data[selectedDataIndex].qr} alt="" />
+                                </Link>
                             )}
                         </Modal>
                     )}

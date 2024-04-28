@@ -36,7 +36,13 @@
 
             .elem {
                 border: 1px solid #595959;
-                background-color: #252525;
+                background: rgb(46, 46, 46);
+                background: linear-gradient(
+                    320deg,
+                    rgb(39, 39, 39) 0%,
+                    rgb(50, 50, 50) 50%,
+                    rgb(71, 65, 65) 100%
+                );
                 padding: 40px;
                 max-height: 400px;
                 border-radius: 15px;
