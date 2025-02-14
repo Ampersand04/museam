@@ -1,6 +1,6 @@
 .intro {
-    font-family: 'Montserrat', sans-serif;
-    background-image: url('/intro.png');
+    font-family: "Montserrat", sans-serif;
+    background-image: url("/intro.png");
     background-repeat: no-repeat;
     background-size: cover;
     // padding: 100px 0 0 0;
@@ -10,7 +10,7 @@
     animation: startAnim 0.4s;
 
     &_small {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         padding: 100px 0 0 0;
         height: 60vh;
         color: #fff;
@@ -47,7 +47,7 @@
 
         h1 {
             font-size: 64px;
-
+            text-shadow: 0 1px 5px #757575;
             font-weight: 700;
             text-transform: uppercase;
             max-width: 400px;
